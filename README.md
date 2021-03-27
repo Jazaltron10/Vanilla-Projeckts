@@ -1,3 +1,3 @@
-# Vanilla-Projeckts
+# ***Vanilla-Projeckts***
 
-These new projects are going to be amazing
+# These new projects are going to be amazing

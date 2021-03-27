@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Describes the header */
+.header-box{
+    background:linear-gradient(to right ,darkred,red,yellow,lime,darkgreen,black);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Content within the header */
+h1{
+    color: white;
+    font-size: 3.5rem;
+    margin-left: 0px;
+}
+
+/* Search bar */
+#filter{
+    padding: 10px;
+    margin-right: 50px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* The container that wraps around the list */
+.container{
+    margin: auto;
+    margin-top: 10px ;
+    background-color:#f4f4f4;
+    width:700px;
+    height: auto;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+
+
+/* Add items Section */
+#addForm{
+    padding: 20px;
+}
+
+.add-items{
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#submit{
+    padding: 8px;
+    background-color: black;
+    color: red;
+    border:2px solid green ;
+    border-radius: 5px;
+}
+#submit:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+#select{
+    padding: 8px;
+    border-radius: 5px;
+    background-color: black;
+    color: red;
+    border:2px solid green;
+}
+#select:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+/* items list section */
+#items{
+    padding: 20px;
+}
+
+h3{
+    padding-bottom: 5px;
+    font-size: 2rem;
+}
+h3.title{
+    padding: 20px;
+    margin-bottom: -40px;
+
+}
+.item-list{
+    border: 1px solid grey;
+    padding: 20px;
+    list-style: none;
+    margin-bottom: 2px;
+    border-radius: 5px;
+}
+
+/* X button */
+.X{
+    
+    float: right;
+    background-color:black;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid green;
+    color: red;
+}
+.X:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* RWD */
+@media(max-width:700px){
+    .header-box{
+        width: 100%;
+    }
+    h1{
+        font-size: 2.5rem;
+        margin-right: 10px;
+    }
+    .container{
+        width: 90%;
+    }
+}

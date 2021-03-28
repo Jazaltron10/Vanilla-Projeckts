@@ -36,6 +36,7 @@ h1{
     margin: auto;
     margin-top: 10px ;
     background-color:#f4f4f4;
+    /* background:linear-gradient(to right ,darkred,red,yellow,lime,darkgreen,black); */
     width:700px;
     height: auto;
     border: 2px solid grey;
@@ -102,12 +103,15 @@ h3.title{
     list-style: none;
     margin-bottom: 2px;
     border-radius: 5px;
+    background:linear-gradient(to right ,darkred,red,yellow,lime,darkgreen,black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* X button */
 .X{
-    
-    float: right;
+    /* float: right; => Not recommended, as it breaks the styling as more items get added to the list*/
     background-color:black;
     padding: 5px;
     border-radius: 50%;

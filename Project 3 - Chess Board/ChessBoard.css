@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aquamarine;
+}
+/*header section*/
+header{
+    margin: 5px 0;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header > h1{
+    border:  red groove 3px;
+    padding: 10px;
+    background: linear-gradient(to left,darkred,red,green,darkgreen);
+    background-repeat: no-repeat;
+    background-position: center center;
+    color:white;
+    border-radius: 15px;
+}
+/*Chess Board*/
+.container{
+    margin: auto;
+    max-width:600px ;
+    max-height: 600px;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-auto-rows: minmax(auto,75px);
+    grid-auto-columns:0px;
+}
+.wrapper > section{
+    padding: 1em;
+}
+/*Chess Tiles*/
+.North{
+    background: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.West{
+    background: limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.East{
+    background: limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.South{
+    background: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hover Effect */
+.North:hover{
+    background:yellow;
+    cursor: pointer;
+    color:black;
+}
+.West:hover{
+    background:yellow;
+    cursor: pointer;
+    color:black;
+}
+.East:hover{
+    background:yellow;
+    cursor: pointer;
+    color:black;
+}
+.South:hover{
+    background:yellow;
+    cursor: pointer;
+    color:black;
+}
+
+
+/* Footer Section */
+footer{
+    margin: 5px 0;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer > h3{
+    border:  red groove 3px;
+    padding: 10px;
+    background: linear-gradient(to right ,darkred,red,green,darkgreen);
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    border-radius: 15px;
+}
+
+/*RWD*/
+@media(max-width:650px){
+    body{
+        height: fit-content;
+        width: max-content;
+        margin: 0;
+    }
+    .container{
+        width: 100%;
+    }
+    .wrapper{
+        margin: 0;
+        grid-auto-rows: 80px;
+        grid-auto-columns:80px;
+    }
+    footer{
+        margin-top: 21rem;
+    }
+}
+@media(max-width:450px){
+    body{
+        height: fit-content;
+        width: max-content;
+        margin: 0;
+    }
+    .container{
+        width: 100%;
+    }
+    .wrapper{
+        margin: 0;
+        grid-auto-rows: 110px;
+        grid-auto-columns:110px;
+    }
+    footer{
+        margin-top: 21rem;
+    }
+}

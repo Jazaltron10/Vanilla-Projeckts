@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CHESS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        /*header section*/
+        header{
+            margin: 5px 0;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header > h1{
+            border:  red groove 3px;
+            padding: 10px;
+            background: linear-gradient(to left,darkred,red,green,darkgreen);
+            background-repeat: no-repeat;
+            background-position: center center;
+            color:white;
+            border-radius: 15px;
+        }
+        /*Chess Board*/
+        .container{
+            margin: auto;
+            max-width:600px ;
+            max-height: 600px;
+        }
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            grid-auto-rows: minmax(auto,75px);
+            grid-auto-columns:0px;
+        }
+        .wrapper > section{
+            padding: 1em;
+        }
+        /*Chess Tiles*/
+        .North{
+            background: red;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .West{
+            background: limegreen;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .East{
+            background: limegreen;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .South{
+            background: red;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Hover Effect */
+        .North:hover{
+            background:yellow;
+            cursor: pointer;
+            color:black;
+        }
+        .West:hover{
+            background:yellow;
+            cursor: pointer;
+            color:black;
+        }
+        .East:hover{
+            background:yellow;
+            cursor: pointer;
+            color:black;
+        }
+        .South:hover{
+            background:yellow;
+            cursor: pointer;
+            color:black;
+        }
+
+
+        /* Footer Section */
+        footer{
+            margin: 5px 0;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        footer > h3{
+            border:  red groove 3px;
+            padding: 10px;
+            background: linear-gradient(to right ,darkred,red,green,darkgreen);
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: white;
+            border-radius: 15px;
+        }
+
+        /*RWD*/
+        @media(max-width:650px){
+            body{
+                height: fit-content;
+                width: max-content;
+                margin: 0;
+            }
+            .container{
+                width: 100%;
+            }
+            .wrapper{
+                margin: 0;
+                grid-auto-rows: 80px;
+                grid-auto-columns:80px;
+            }
+            footer{
+                margin-top: 21rem;
+            }
+        }
+        @media(max-width:450px){
+            body{
+                height: fit-content;
+                width: max-content;
+                margin: 0;
+            }
+            .container{
+                width: 100%;
+            }
+            .wrapper{
+                margin: 0;
+                grid-auto-rows: 110px;
+                grid-auto-columns:110px;
+            }
+            footer{
+                margin-top: 21rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header> 
+        <h1>Chess Board</h1>
+    </header>
+
+
+    <article class="container">
+        <article class="wrapper">
+        <section class="North Tile">
+            <span> a8 </span> 
+            <img src="/SECTION 10 - GRIDS/Chess black/046-rook.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> b8 </span> 
+            <img  src="/SECTION 10 - GRIDS/Chess black/044-knight.png" height = "30px" alt="">
+        </section>
+        <section class="North Tile">
+            <span> c8 </span> 
+            <img  src="/SECTION 10 - GRIDS/Chess black/033-bishop.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> d8 </span> 
+            <img  src="/SECTION 10 - GRIDS/Chess black/011-king.png" height = "30px" alt="">
+        </section>
+        <section class="North Tile">
+            <span> e8 </span> 
+            <img  src="/SECTION 10 - GRIDS/Chess black/022-queen.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> f8 </span> 
+            <img  src="/SECTION 10 - GRIDS/Chess black/033-bishop.png" height = "30px" alt="">
+        </section>
+        <section class="North Tile">
+            <span> g8 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/044-knight.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> h8 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/046-rook.png" height = "30px" alt="">
+        </section>
+
+
+
+        
+        <section class="East Tile">
+            <span> a7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> b7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="East Tile">
+            <span> c7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> d7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="East Tile">
+            <span> e7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> f7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="East Tile">
+            <span> g7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> h7 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess black/047-pawn.png" height = "30px" alt="">
+        </section>
+
+
+
+
+        <section class="North Tile">
+            a6
+        </section>
+        <section class="West Tile">
+            b6
+        </section>
+        <section class="North Tile">
+            c6
+        </section>
+        <section class="West Tile">
+            d6
+        </section>
+        <section class="North Tile">
+            e6
+        </section>
+        <section class="West Tile">
+            f6
+        </section>
+        <section class="North Tile">
+            g6
+        </section>
+        <section class="West Tile">
+            h6
+        </section>
+
+
+        <section class="East Tile">
+            a5
+        </section>
+        <section class="South Tile">
+            b5
+        </section>
+        <section class="East Tile">
+            c5
+        </section>
+        <section class="South Tile">
+            d5
+        </section>
+        <section class="East Tile">
+            e5
+        </section>
+        <section class="South Tile">
+            f5
+        </section>
+        <section class="East Tile">
+            g5
+        </section>
+        <section class="South Tile">
+            h5
+        </section> 
+
+
+        <section class="North Tile">
+            a4
+        </section>
+        <section class="West Tile">
+            b4
+        </section>
+        <section class="North Tile">
+            c4
+        </section>
+        <section class="West Tile">
+            d4
+        </section>
+        <section class="North Tile">
+            e4
+        </section>
+        <section class="West Tile">
+            f4
+        </section>
+        <section class="North Tile">
+            g4
+        </section>
+        <section class="West Tile">
+            h4
+        </section>
+
+
+
+        <section class="East Tile">
+            a3
+        </section>
+        <section class="South Tile">
+            b3
+        </section>
+        <section class="East Tile">
+            c3
+        </section>
+        <section class="South Tile">
+            d3
+        </section>
+        <section class="East Tile">
+            e3
+        </section>
+        <section class="South Tile">
+            f3
+        </section>
+        <section class="East Tile">
+            g3
+        </section>
+        <section class="South Tile">
+            h3
+        </section> 
+
+
+
+        <section class="North Tile">
+            <span> a2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> b2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="North Tile">
+            <span> c2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> d2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="North Tile">
+            <span> e2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> f2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="North Tile">
+            <span> g2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+        <section class="West Tile">
+            <span> h2 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/047-pawn.png" height = "30px" alt="">
+        </section>
+
+
+
+        <section class="East Tile">
+            <span> a1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/046-rook.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> b1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/044-knight.png" height = "30px" alt="">
+        </section>
+        <section class="East Tile">
+            <span> c1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/033-bishop.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> d1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/011-king.png" height = "30px" alt="">
+        </section>
+        <section class="East Tile">
+            <span> e1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white//022-queen.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> f1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/033-bishop.png" height = "30px" alt="">
+        </section>
+        <section class="East Tile">
+            <span> g1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/044-knight.png" height = "30px" alt="">
+        </section>
+        <section class="South Tile">
+            <span> h1 </span>
+            <img  src="/SECTION 10 - GRIDS/Chess white/046-rook.png" height = "30px" alt="">
+        </section>
+
+        
+    
+    
+    </article>
+    
+    
+    </article>
+    
+    <footer>
+
+    <h3>
+        This is a chess board attempt with CSS Grids.<br>
+        2021 @ jazaltron.inc.
+    </h3>
+
+</footer>
+
+
+
+</body>
+</html>

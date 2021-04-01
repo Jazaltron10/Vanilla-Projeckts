@@ -2,6 +2,7 @@
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
+
 // Form submit event 
 form.addEventListener('submit', addItem);
 // Delete event 
@@ -13,16 +14,15 @@ filter.addEventListener('keyup', filterItems)
 // Add Item Function
 function addItem(e){
     e.preventDefault();
-    //console.log(1);
 
     // Get input value
     var newInput = document.getElementById("InputBox").value;
 
     // Create new li element 
     var list = document.createElement('li');
-    // Add ClassName  
+    // Add existing ClassName to new li element  
     list.className = "item-list";
-    // Add text node with input value 
+    // Create text node with input value and append to new li
     list.appendChild(document.createTextNode(newInput));
     
     
@@ -30,7 +30,7 @@ function addItem(e){
     // Create Delete button element
     var DeleteBtn = document.createElement('button');
 
-    // Add classes to delete button
+    // Add existing classes to delete button
     DeleteBtn.className = "X delete";
 
     // Append text node

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+/* BASE STYLES */
+*{
+    /* I set box-sizing to border-box so that the padding does not affect the width of any elements  */
+    box-sizing: border-box;
+    /* This simply removes all of the margins and paddings from everything, taking all the extra spaces away   */
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family:'Poppins', sans-serif;
+    color: #111;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+p{
+    margin: 20px 0 10px 0;/*Top Right Bottom Left, adds space before and after the paragraph*/
+    font-size: 1.1rem;/*Default font-size = 16px, rem = user_defined_size * default_font-size(16px)*/
+}
+
+
+/* Styling how the whole section is displayed */
+section{
+    display: flex;
+    /* to align in the middle vertically a height must be added to this component */
+    height: 100vh;
+    /* We then use align items to center the text vertically, NOTE: justify-content is for centering items horizontally */
+    align-items: center;
+    padding: 100px;
+}
+
+
+
+/* BUTTON */
+/* This is for "button" link to the contact page in the home page */
+.btn{
+    cursor: pointer;
+    display: inline-block;/*In order to use margin on it*/
+    background: #f60f20;
+    color: white;
+    text-decoration: none;/*To remove the underline*/
+    padding: 10px 30px;
+    margin: 20px 0;
+}
+.btn:hover{
+    transform:scale(.95) ;/*1 is the default*/
+}
+
+
+
+/* This is the Logo section */
+.logo{
+    /* we position it absolute so that we can give it values from the top and left */
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    font-size: 2rem;
+    font-weight: 700;
+    /* The higher the number of the z-index the closer it is to the screen, this is here because we want it to show even when we toggle the menu */
+    z-index: 10;
+}
+
+
+
+/* TOGGLE */
+/* This section takes care of the toggle button */
+.toggle{
+
+}
+
+
+
+
+/* HOMEPAGE */
+/* This is the container with the text on the home page and link to contact page  */
+.home-content{
+    position: relative;
+    z-index: 10;
+    max-width: 600px; /*This to wrap the the text length*/
+}
+
+
+
+/* Styling the home image in this section */
+.home-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* at this point it is always going to be the height of the browser, to get it to adapt when the browser height changes, we have to add a height component initially=110%*/
+    height: 100%;
+}
+
+
+
+/* This is the navigation section */
+.navigation{
+    /* i'm going to display none until i am ready to style it  */
+    display: none; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

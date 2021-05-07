@@ -52,7 +52,7 @@ function removeItem(e){
         }
         console.log(`item deleted`)
     }
-}
+}// blue wednesday long walk short dock(ft dillan witherow )
 
 
 

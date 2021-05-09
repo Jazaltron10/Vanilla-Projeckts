@@ -1,5 +1,6 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-/* GOOGLE FONTS */
 
 /* VARIABLES CSS */
 :root{
@@ -8,9 +9,9 @@
     /* Colors */
     --first-color:        #3E0E12;    
     --first-color-dark:   #2F0A0D; 
-    --first-color-light:  #524748; 
-    --first-color-lighten:#7B6F71; 
-    --text-color:         #FBF9F9; 
+    --first-color-light:  #7B6F71; 
+    --first-color-lighten:#FBF9F9;  
+    --text-color:         #524748;
     
     /* Font and Typography */
     --body-font: 'Poppins', sans-serif;               
@@ -102,13 +103,25 @@ img{
     padding: 4rem 0 2rem;
 }
 
+.section-title, .section-subtitle{
+    text-align: center;
+}
 
+.section-title{
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb-3);
+}
 
-
+.section-subtitle{
+    display: block;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+}
 
 
 /*===== LAYOUT =====*/
-
+]]
 
 /*===== NAV =====*/
 

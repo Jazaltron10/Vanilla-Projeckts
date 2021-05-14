@@ -12,6 +12,8 @@ const showMenu = (toggleId, navId) => {
 }
 showMenu('nav-toggle','nav-menu')
 
+
+
 /*===== REMOVE MENU MOBILE =====*/
 
 const navLink = document.querySelectorAll('.nav__link')
@@ -23,10 +25,11 @@ const linkAction = () => {
 navLink.forEach(link => link.addEventListener('click', linkAction))
 
 
+
 /*===== SCROLL SECTIONS ACTIVE LINK =====*/
 const sections = document.querySelectorAll('section[id]')
 
-const scrollActive = () =>{
+function scrollActive(){
     const scrollY = window.pageYOffset
 
     sections.forEach(current => {
@@ -44,30 +47,62 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
+
 /*===== CHANGE BACKGROUND HEADER =====*/ 
-const scrollHeader = () =>{
+function scrollHeader () {
     const header = document.getElementById('header')
     if(this.scrollY >= 200) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader)
 
 
+
 /*=====  SHOW SCROLL TOP =====*/ 
-const scrollTop = () =>{
+function scrollTop(){
     const scrollTop = document.getElementById('scroll-top')
     if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', scrollTop)
 
-/*===== SHOW SCROLL TOP =====*/ 
 
 
 /*===== MIXITUP FILTER PORTFOLIO =====*/ 
+const mixer = mixitup('.portfolio__container', {
+    selectors: {
+        target: '.portfolio__content'
+    },
+    animation: {
+        duration: 400
+    }
+});
+
 
 /* Link active portfolio */ 
+const linkPortfolio = document.querySelectorAll('.portfolio__item')
+
+function activePortfolio(){
+    if(linkPortfolio){
+        linkPortfolio.forEach(l => l.classList.remove('active-portfolio'))
+        this.classList.add('active-portfolio')
+    }
+}
+linkPortfolio.forEach(l => l.addEventListener('click', activePortfolio))
 
 
-/*===== SWIPER CAROUSEL =====*/ 
+
+/*===== S WIPER CAROUSEL =====*/ 
+const swiper = new Swiper('.testimonial__container', {
+    spaceBetween: 16,
+    loop: true,
+    grabCursor: true,
+    
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+
 
 
 /*===== GSAP ANIMATION =====*/ 

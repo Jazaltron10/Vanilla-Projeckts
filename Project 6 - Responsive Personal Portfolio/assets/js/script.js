@@ -100,6 +100,14 @@ const swiper = new Swiper('.testimonial__container', {
         el: '.swiper-pagination',
         clickable: true,
     },
+    breakpoints:{
+        640:{
+            slidesPerView: 2,
+        },
+        1024:{
+            slidesPerView: 3,
+        },
+    }
 });
 
 

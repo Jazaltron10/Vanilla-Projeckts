@@ -11,7 +11,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(174, 190, 205, .3);
+    box-shadow: 0 8px 5px rgba(174, 190, 205, .3);
     padding: .5rem;
     background-color: #fff;
 }
@@ -55,7 +55,7 @@ article{
 .click{
     padding: .5rem 1.5rem;
     border-radius: .5rem;
-    background-color: #fff;
+    background-color: #fff
 }
 span{
     margin-left: 10px;

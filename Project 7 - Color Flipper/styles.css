@@ -5,17 +5,22 @@
 }
 body{
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 nav{
     height: 5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 8px 5px rgba(174, 190, 205, .3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     padding: .5rem;
     background-color: #fff;
 }
-
+a {
+    text-decoration: none;
+    color:  hsl(205, 78%, 60%);
+    font-weight: bold;
+}
 .categories{
     display: flex;
 }
@@ -55,11 +60,20 @@ article{
 .click{
     padding: .5rem 1.5rem;
     border-radius: .5rem;
-    background-color: #fff
+    background-color: transparent;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: .5s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.click:hover{
+    cursor: pointer;
+    color: aliceblue;
+    background: #000;
 }
 span{
     margin-left: 10px;
-    color: aqua;
+    color:  hsl(205, 78%, 60%);
 }
 
 

@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #333;
+    font-family: sans-serif;
+}
+
+/* To Align items to the center. 
+You first have to create a container with 
+height and width 
+Secondly you have to display the container 
+in flex, justify content center and then you can 
+align items to the center.
+
+
+*/
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height:450px;
+    width: 450px;
+    background-color: palegreen;
+}
+.wrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: limegreen;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff652f' fill-opacity='0.13'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    border:.35rem groove palevioletred;
+}
+.title{
+    height: 150px;
+    /* background:red; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: .5rem;
+    font-size: 3rem;
+}
+.number{
+    /* background:white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    font-size: 8rem;
+}
+.buttonwrap{
+    height: 150px;
+    /* background:yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: .5rem;
+}
+
+.click{
+    margin: 0 .35rem;
+    padding: .15rem;
+    font-size: .85rem;
+    font-weight: bold;
+    border-radius: .35rem;
+    border:2px groove black;
+    background: transparent;
+    transition: .5s;
+}
+.click:hover{
+    background: #000;
+    color: lime;
+    cursor: pointer;
+}

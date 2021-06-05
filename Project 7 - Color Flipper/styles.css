@@ -75,7 +75,25 @@ span{
     margin-left: 10px;
     color:  hsl(205, 78%, 60%);
 }
+/* The Responsive Section Of My Code  */
+@media screen and (max-width: 500px) {
+    .bg__header{
+        font-size: larger;
+    }
+    .simple, .hex{
+        margin-right: .5rem;
+    }
+    .logo{
+        font-size: medium;
+    }
+    .click{
+        padding: .25rem .75rem;
+    }
+    span{
+        margin-left: 2px;
 
+    }
+}
 
 
 /* .box{

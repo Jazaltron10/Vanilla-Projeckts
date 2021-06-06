@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*MAIN SECTION*/
+
+#base{
+    font-family: sans-serif;
+    height:100vh;
+    background-color: #f4f4;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff652f' fill-opacity='0.13'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button  {
+    color:red;
+    padding:2em 4em ;
+    border: 0;
+}
+.button:hover{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s ease-out;
+}
+.modal-container{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(0, 255, 255, 0.3)/*alternatively rgb(255, 255, 255, 0.1)*/;
+}
+.modal-content{
+    background-color: rgb(255, 0, 0, 0.4);
+    margin: 10% auto;/*the first value is for top and bottom and auto is for left and right*/
+    width: 600px;/*you can also use %here but pixel gives you fixed width*/
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.9),0 10px 20px 0 rgba(0,0,0,0.6);/*x-axis, y-axis, blur and spread*/
+    /*This section is added to animate the intro of the modal form*/
+
+    animation-name: jcmodka;
+    animation-duration: 1.5s;
+}
+@keyframes jcmodka{
+    from{opacity:0}
+    to {opacity:1}
+}
+
+/*Styling the modal contact form*/
+.modal-body{
+    background-color: white;
+    padding: 1em;
+}
+.modal-body form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.modal-body form label{
+    display: block;
+}
+.modal-body form .mask{
+    grid-column: 1/3;
+}
+.modal-body form button, .modal-body form input, .modal-body form textarea{
+    padding: .5em;
+    width: 100%;
+    border: 2px ridge rgba(0,255,0,0.6);
+}
+
+.modal-body form button{
+    background-color: rgba(0,255,0,0.6);
+    border: 0;
+    text-transform: uppercase;
+    color: white;
+}
+.modal-body form button:hover,.modal-body form button:focus{
+    background-color: rgba(255,0,0,0.6);
+    cursor: pointer;
+    transition:background-color 2s ease-out;
+    border-radius: 10px ;
+}
+.modal-body{
+    padding: 10px 20px;
+}
+/*This section is for styling the modal header and footer*/
+.modal-header{
+    color: lime;
+    padding: 20px;
+}
+.modal-header h2, .modal-footer h3{
+    margin: 0;
+}
+.modal-footer{
+    color: lime;
+    padding: 10px;
+    text-align: center;
+}
+/*styling the close button "x" */
+.closeBtn{
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color:lime;
+    text-decoration: none;
+    cursor: pointer;
+}

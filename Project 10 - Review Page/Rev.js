@@ -50,21 +50,63 @@ const nextBtn = document.querySelector(".next")
 const randomBtn = document.querySelector(".random")
 
 // Setting the starting item
-let CurrentItem = 1
+let currentItem = 0;
 
-window.addEventListener("DOMContentLoaded", ()=>{
-    const item = reviews[CurrentItem];
+window.addEventListener("DOMContentLoaded", k = () =>{
+    showPerson(currentItem);
+})
+
+// Creating a function that shows the person based on the item 
+const showPerson =(person)=>{
+    const item = reviews[person];
     img.src = item.img
     author.textContent = item.name
     job.textContent = item.job
     info.textContent = item.text
+}
+
+// Adding an event listener to the next button to show the next person in the array
+
+nextBtn.addEventListener('click', N =()=>{
+    currentItem++; // This increases the currentitem value by one anytime the nextBtn is clicked.
+    // Note: The currentitem maps to the index of the reviews array 
+    console.log("Hello world")
+    // adding a conditional to check if the current index is greater than the last index (i.e the array.length - 1 index)
+    if (currentItem > reviews.length - 1){
+        // if this evaluates to true then the index returns to the first item in the array
+        currentItem = 0;
+    }
+    showPerson(currentItem);
 })
 
 
 
+// Adding an event listener to the previous button to show the previous  person in the array list
+
+prevBtn.addEventListener('click', P =()=>{
+    currentItem--; // This decreases the currentitem value by one anytime the previous Button is clicked.
+    // Note: The currentitem also maps to the index of the reviews array 
+    console.log("Hello world")
+    // adding a conditional to check if the current index is less than 0 (i.e index < 0)
+    if (currentItem < 0){
+        // if this evaluates to true then the index returns to the last item in the array
+        currentItem = reviews.length - 1 ;
+    }
+    showPerson(currentItem);
+})
 
 
-
+// This is the random section of this project 
+// it shows a random person from the array
+randomBtn.addEventListener('click', R =()=>{
+    // to do this i take inspiration from previous project that 
+    // dealt with creating and using random numbers
+    // So here the current index is generated as a random number and 
+    // then rounded down to the nearest integer with the length of the 
+    // array serving as an upperbound 
+    currentItem = Math.floor( Math.random() * reviews.length)
+    showPerson(currentItem);
+})
 
 
 

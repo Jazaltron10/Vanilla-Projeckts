@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: greenyellow;
+}
+
+/* This is the section for logo and toggle button */
+.logo{
+    min-height: 5rem;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.header{
+    font-style: italic;
+    font-weight: 900;
+    font-size: 2rem;
+    color: lime;
+    text-shadow: 2px 2px 4px #000;
+}
+.btnToggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#menubtn{
+    height: 100%;
+    width: 100%;
+    transition: .5s ease-out;
+}
+#menubtn:hover{
+    transform: rotate(90deg);
+}
+
+/* This is the section for the navigation links  */
+.nav_links{
+    height: 0;
+    overflow: hidden;
+    transition: .2s ease;
+} 
+.show_navlinks{
+    /* min-height: 16rem; -> could also decide to use this instead*/ 
+    height: 100%;
+    /* background-color: aqua; */
+}
+.social_links{
+    background-color: cadetblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.navlist{
+    height: 100%;
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: .2s ease;
+}
+.homie{
+    padding: 1rem;
+    transition: .5s ease-out;
+}
+.homie:nth-child(odd){
+    background:orange;
+}
+.homie:nth-child(even){
+    background:yellow;
+}
+.homie:hover{
+    transform: translateY(-2px);
+    background-color: rgba(65, 105, 250, .15);
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* This section is for the social media links. */
+.sociallist{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.iconic{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 50%;
+    width: 50%;
+}
+.iconic:hover{
+    transform: translateY(-2px);
+    transform: scale(.9);
+    /* background-color: #fff; */
+}
+
+
+
+/* This is the responsive section of the page for larger Screens  */
+@media screen and (min-width: 768px) {
+body{
+    background-color: pink;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    min-height: 5rem;
+    box-shadow: 0 0 10px black;
+}
+.logo{
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1.75rem;
+    color: lime;
+    text-shadow: 2px 2px 4px #000;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.nav_links{
+    height: auto;
+}
+.navlist{
+    height: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.homie:hover{
+    transform: translateY(-2px);
+}
+.social_links{
+    background-color: cadetblue;
+    position: relative;
+    bottom: none;
+}
+.sociallist{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.iconic{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 50%;
+    width: 50%;
+}
+iconic:hover{
+    transform: translateY(-2px);
+}
+#menubtn, .btnToggle{
+    display: none;
+}
+}
+
+
+
+
+/* This section is for ipad screens */
+@media screen and (min-width: 1024px) {
+    body{
+        background-color: deepskyblue;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr;
+        min-height: 5rem;
+        box-shadow: 0 0 10px black;
+    }
+    .logo{
+        font-style: italic;
+        font-weight: 900;
+        font-size: 1.75rem;
+        color: lime;
+        text-shadow: 2px 2px 4px #000;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navlist{
+        height: 100%;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .homie:hover{
+        transform: translateY(-2px);
+    }
+    .sociallist{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .iconic{
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        height: 50%;
+        width: 50%;
+    }
+    iconic:hover{
+        transform: translateY(-2px);
+    }
+    #menubtn, .btnToggle{
+        display: none;
+    }
+}
+    
+
+
+    

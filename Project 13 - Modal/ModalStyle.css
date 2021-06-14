@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.bgpic{
+    height: 100vh;
+    background-image: url('pics/ellie.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+/* This sectionis for the modal button */
+.homebox{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18,108,50,0.5);
+    /* display: none; */
+}
+.homecon{
+    position: relative;
+    height: 250px;
+    width: 95vw;
+    background-color: rgba(118,18,50,0.5);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid white;
+    /* display: none; */
+}
+.header{
+    font-size: 2rem;
+}
+button{
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* This section is for the modal itself */
+.modalbox{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18,108,50,0.5);
+    display: none;
+}
+.modal{
+    position: relative;
+    height: 250px;
+    width: 95vw;
+    background-color: rgba(118,18,50,0.5);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+.closebtn{
+    background-color: transparent;
+    border: none;
+}
+img{
+    right: .5rem;
+    top: 1rem;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    transition: all .3s ease;
+}
+#close:hover{
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    font-size: 2rem;
+    margin-top: -1rem;
+}
+.spaces{
+    background-color: rgba(19, 105, 218, 0.5);
+    height: 1rem;
+    border-radius: 10px;
+}
+
+
+/* This is the responsive section of the project */
+@media screen and (min-width:768px) {
+    .homecon, .modal{
+        height: 300px;
+        width: 90vw;
+    }
+    .header, .content{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width:1080px) {
+    .homecon, .modal{
+        height: 300px;
+        width: 50vw;
+    }
+    .header, .content{
+        font-size: 5rem;
+    }
+}

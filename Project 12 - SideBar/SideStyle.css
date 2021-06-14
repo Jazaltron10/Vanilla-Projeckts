@@ -127,7 +127,31 @@ img:hover{
         display: block;
     }
     .social, .sidenav, .navcon{
-        width: 30vw;
+        width: 40vw;
+    }
+    .singlink{
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    button, .header{
+        height: 65px;
+        width: 65px;
+        padding: 5px;
+    }
+    .solink{
+        height: 30px;
+        width: 30px;
+    }
+    .social{
+        bottom: 25px;
+    }
+}
+@media screen and (min-width:1024px)  {
+    .btncon{
+        display: block;
+    }
+    .social, .sidenav, .navcon{
+        width: 40vw;
     }
     .singlink{
         padding: 1rem;
@@ -141,30 +165,6 @@ img:hover{
     .solink{
         height: 50px;
         width: 50px;
-    }
-    .social{
-        bottom: 25px;
-    }
-}
-@media screen and (min-width:1024px)  {
-    .btncon{
-        display: block;
-    }
-    .social, .sidenav, .navcon{
-        width: 30vw;
-    }
-    .singlink{
-        padding: 1rem;
-        font-size: 2rem;
-    }
-    button, .header{
-        height: 65px;
-        width: 65px;
-        padding: 5px;
-    }
-    .solink{
-        height: 70px;
-        width: 70px;
     }
     .social{
         bottom: 25px;

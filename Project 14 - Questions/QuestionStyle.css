@@ -127,6 +127,6 @@ header{
     }
     .question, .hide{
         padding: 1.5rem;
-        font-size: var(--font-size-smallest;
+        font-size: var(--font-size-smallest);
     }
 }

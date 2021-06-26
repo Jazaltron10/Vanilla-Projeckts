@@ -15,7 +15,6 @@ showMenu('nav-toggle','nav-menu')
 
 
 /*===== REMOVE MENU MOBILE =====*/
-
 const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () => {

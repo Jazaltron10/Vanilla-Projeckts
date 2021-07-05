@@ -67,7 +67,7 @@ h1::after{
     left: 25%;
     background-color: #fff;
 }
-.oklist{
+.btns{
     margin: 5px;
 }
 button{
@@ -75,7 +75,7 @@ button{
     background-color: var(--color-1);
     color: var(--color-i);
     border-radius: 10px;
-    padding: .5rem;
+    padding: .13rem;
     cursor: pointer;
     transition: all ease .4s;
 }
@@ -85,13 +85,14 @@ button:hover{
 .FoodList{
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 .5rem;
+    padding: 0 .35rem;
 }
 .food{
     height: auto;
     padding: 0.5rem;
     display: grid;
     grid-template-rows: 1.5fr 1fr;
+    gap: .25rem;
 }
 /* .food_2, .food_3, .food_6, .food_7,.food_10{
     background: var(--color-7);
@@ -128,6 +129,7 @@ img{
     height: 100%;
     border: 2px solid var(--color-i);
     border-radius: .5rem;
+    object-fit: cover;
 }
 .yum{
     position: absolute;
@@ -152,6 +154,11 @@ img{
     border: 1px solid #fff;
     padding: 5px 15px;
 }
+@media screen and (min-width : 315px) {
+    button{
+        padding: .35rem;
+    }
+}
 @media screen and (min-width : 365px) {
     .FoodList{
         padding: 0 1.5rem;
@@ -161,8 +168,9 @@ img{
         background-color: var(--color-1);
         color: var(--color-i);
         border-radius: 10px;
-        width: 5rem;
-        height: 2.5rem;
+        font-size: .75rem;
+        width: 4rem;
+        height: 2rem;
     }
 }
 @media screen and (min-width : 500px){

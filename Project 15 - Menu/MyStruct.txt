@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MenuStyle.css">
+    <title>Menu Project</title>
+
+</head>
+<body>
+
+    <Main class="container">
+        <section class="header">
+            <div class="menuCon">
+                <h1>Our Menu</h1>
+            <!-- Filter Buttons -->
+            <div class="btnContainer">
+                <button class="btns" type="button" 
+                data-id="all">All</button>
+                <button class="btns" type="button" data-id="breakfast">Breakfast</button>
+                <button class="btns" type="button" data-id="lunch">Lunch</button>
+                <button class="btns" type="button" data-id="shakes">Shakes</button>
+                <button class="btns" type="button" data-id="dinner">Dinner</button>
+            </div>
+            </div>
+        </section>
+
+        <section class="FoodList">
+            <!-- food 1 -->
+            <article class="food food_1">
+                <div class="pic">
+                    <img src="./images/item-1.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 2 -->
+            <article class="food food_2">
+                
+                <div class="pic">
+                    <img src="./images/item-2.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 3 -->
+            <article class="food food_3">
+                <div class="pic">
+                    <img src="./images/item-3.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 4 -->
+            <article class="food food_4">
+                <div class="pic">
+                    <img src="./images/item-4.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 5 -->
+            <article class="food food_5">
+                <div class="pic">
+                    <img src="./images/item-5.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 6 -->
+            <article class="food food_6">
+                <div class="pic">
+                    <img src="./images/item-6.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            
+            <!-- food 7 -->
+            <article class="food food_7">
+                <div class="pic">
+                    <img src="./images/item-7.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 8 -->
+            <article class="food food_8">
+                <div class="pic">
+                    <img src="./images/item-8.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 9 -->
+            <article class="food food_9">
+                <div class="pic">
+                    <img src="./images/item-9.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+            <!-- food 10 -->
+            <article class="food food_10">
+                <div class="pic">
+                    <img src="./images/item-10.jpeg" alt="">
+                    <div class="yum">
+                        <a href="#">Yummy</a>
+                    </div>
+                </div>
+                
+                <div class="desc">
+                    
+                    <div class="heading">
+                        <div class="name">ButterMilk Pancakes</div>
+                        <div class="price"> $15.99 </div>
+                    </div>
+                    <p class="words">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolor, quidem praesentium vero quae quaerat at! Accusantium ipsum odio unde.
+                    </p>
+                
+                </div>
+            </article>
+
+        </section>
+
+
+    </Main>
+
+
+
+    <script src="MenuLogic.js"></script>
+</body>
+</html>

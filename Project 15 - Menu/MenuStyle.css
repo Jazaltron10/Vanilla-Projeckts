@@ -52,7 +52,7 @@ li{
 }
 .btnContainer{
     display: flex;
-    padding-top: 2.5%;
+    padding: 2.5% 0 1.5% 0;
 }
 h1{
     font-size: 3rem;
@@ -71,11 +71,13 @@ h1::after{
     margin: 5px;
 }
 button{
+    text-transform: capitalize;
     border:2px solid var(--color-i);
     background-color: var(--color-1);
     color: var(--color-i);
     border-radius: 10px;
-    padding: .13rem;
+    padding: .25rem;
+    font-size: .65rem;
     cursor: pointer;
     transition: all ease .4s;
 }
@@ -94,22 +96,23 @@ button:hover{
     grid-template-rows: 1.5fr 1fr;
     gap: .25rem;
 }
-/* .food_2, .food_3, .food_6, .food_7,.food_10{
-    background: var(--color-7);
-    border:2px solid var(--color-f);
-}
-.food_1, .food_4, .food_5, .food_8,.food_9{
-    background: var(--color-a);
-    border:2px solid var(--color-3);
-} */
 .desc{
     padding: .5rem;
     background-color: var(--color-e);
+}
+.desc:hover{
+    box-shadow: var(--box-shadow);
 }
 .heading{
     display: flex;
     justify-content: space-between;
     border: 2px solid red;
+}
+.price{
+    color: var(--color-i);
+}
+.name{
+    text-transform: capitalize;
 }
 .words{
     padding: .75rem 0;
@@ -118,7 +121,6 @@ button:hover{
 
 .pic{
     position: relative;
-    /* background-color: var(--color-8); */
     display: flex;
     justify-content: center;
     align-items: center;

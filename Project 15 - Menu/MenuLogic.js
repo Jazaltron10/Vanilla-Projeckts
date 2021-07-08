@@ -75,22 +75,93 @@ const menu = [
         id: 10,
         title: "bison steak",
         category: "dinner",
-        price: 22.99,
+        price: 39.99,
         img: "./images/item-10.jpeg",
         desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
 ];
-console.log("Hello")
-const filterBtns = document.querySelectorAll(".btns");
+const FoodList = document.querySelector(".FoodList");
+const container = document.querySelector(".btnContainer");
 
+/*This Loads all the items from the menu array was the DOM has loaded */
 window.addEventListener("DOMContentLoaded", ()=>{
-    filterBtns.forEach((btn)=>{
-        btn.addEventListener("click", (e)=>{
-            const category = e.currentTarget.dataset.id;
+    displayMenuItems(menu);
+    displayMenuButtons();
+});
+
+
+
+const displayMenuItems =(menuItems)=>{
+        /*Used let because the current values can easily be overwritten */
+        let displayMenu = menuItems.map((item)=>{
+            //console.log(item)-> this logs all the objects in the menu array
+            /*Instead of hardcoding all the menu items we are using the template literal string to inject our html template for all the menu items and also we are changing some texts with ${}, for each item or object in the menu array. This makes it dynamic 
+
+            And lastly we are returning the value of the new array and saving it in the variable display menu 
+            */
+            return `<article class="food">
+            <div class="pic">
+                <img src=${item.img} alt=${item.title}>
+                <div class="yum">
+                    <a href="#">Yummy</a>
+                </div>
+            </div>
+            
+            <div class="desc">
+                
+                <div class="heading">
+                    <div class="name">${item.title}</div>
+                    <div class="price"> ${item.price} </div>
+                </div>
+                <p class="words">
+                        ${item.desc}
+                </p>
+            
+            </div>
+        </article>`
         })
-    })
-})
+        /*We use the join method to convert the displaymenu into a giant string of html template*/
+        displayMenu = displayMenu.join("");
+        //we assign our template object to the innerhtml of the parent element
+        FoodList.innerHTML = displayMenu;
+}
 
 
-
-
+const displayMenuButtons =()=>{
+    const categories = menu.reduce((arr, item)=>{
+        /*When using reduce you always have to return the accumulator*/
+        if(!arr.includes(item.category)){
+            arr.push(item.category);
+        }
+        /*Code Breakdown
+        if the array that i am returning does not include the category property of the current object in the iteration of the menu array, then add it to the array being returned, else if for the next iteration that item.category property is already in my array then just skip it and return my arr array already.
+        */
+        return arr;  
+    },['all']);
+    const categoryBtns = categories.map((category)=>{
+        return `<button class="btns" type="button" 
+        data-id=${category}>${category}</button>`
+    }).join("");
+    container.innerHTML = categoryBtns;
+    const filterBtns = container.querySelectorAll(".btns");
+    /*
+    if you add something dynamically you can only access it once 
+    it has been added already to the DOM not before, thus this section below. 
+    */
+    /*This section deals with the filter buttons */
+    filterBtns.forEach((btn)=>{
+    btn.addEventListener("click", (e)=>{
+        const category = e.currentTarget.dataset.id;
+        const menuCategory = menu.filter((menuItem)=>{
+            if (menuItem.category === category){
+                return menuItem;
+            }
+        });
+        if (category === "all"){
+            displayMenuItems(menu);
+        }else{
+            displayMenuItems(menuCategory);
+        }
+    });
+});
+}

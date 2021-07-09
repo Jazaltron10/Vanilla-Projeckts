@@ -83,21 +83,22 @@ const menu = [
 const FoodList = document.querySelector(".FoodList");
 const container = document.querySelector(".btnContainer");
 
-/*This Loads all the items from the menu array was the DOM has loaded */
+/*This Loads all the items from the menu array once the DOM has loaded */
 window.addEventListener("DOMContentLoaded", ()=>{
-    displayMenuItems(menu);
-    displayMenuButtons();
+    displayMenuItems(menu); // takes the menu array as an argument
+    displayMenuButtons();   // takes no arguments
 });
 
 
 
-const displayMenuItems =(menuItems)=>{
+const displayMenuItems = (menuItems) =>{
         /*Used let because the current values can easily be overwritten */
         let displayMenu = menuItems.map((item)=>{
             //console.log(item)-> this logs all the objects in the menu array
             /*Instead of hardcoding all the menu items we are using the template literal string to inject our html template for all the menu items and also we are changing some texts with ${}, for each item or object in the menu array. This makes it dynamic 
 
             And lastly we are returning the value of the new array and saving it in the variable display menu 
+
             */
             return `<article class="food">
             <div class="pic">
@@ -120,7 +121,8 @@ const displayMenuItems =(menuItems)=>{
             </div>
         </article>`
         })
-        /*We use the join method to convert the displaymenu into a giant string of html template*/
+        /*We use the join method to convert the displaymenu into a giant string of html template,
+        this helps us avoid using comma's to separate each item in the array*/
         displayMenu = displayMenu.join("");
         //we assign our template object to the innerhtml of the parent element
         FoodList.innerHTML = displayMenu;
@@ -128,20 +130,21 @@ const displayMenuItems =(menuItems)=>{
 
 
 const displayMenuButtons =()=>{
-    const categories = menu.reduce((arr, item)=>{
+    const categories = menu.reduce((myarr, item)=>{
         /*When using reduce you always have to return the accumulator*/
-        if(!arr.includes(item.category)){
-            arr.push(item.category);
+        if(!myarr.includes(item.category)){
+            myarr.push(item.category);
         }
         /*Code Breakdown
-        if the array that i am returning does not include the category property of the current object in the iteration of the menu array, then add it to the array being returned, else if for the next iteration that item.category property is already in my array then just skip it and return my arr array already.
+        if the array that i am returning does not include the category property of the current object in the iteration of the menu array, then add it to the array being returned, else if for the next iteration that item.category property is already in my array then just skip it and return my arr array at the end of the iteration.
         */
-        return arr;  
+        return myarr;  
     },['all']);
     const categoryBtns = categories.map((category)=>{
         return `<button class="btns" type="button" 
         data-id=${category}>${category}</button>`
     }).join("");
+    // Adding the buttons to the DOM through InnerHTML
     container.innerHTML = categoryBtns;
     const filterBtns = container.querySelectorAll(".btns");
     /*

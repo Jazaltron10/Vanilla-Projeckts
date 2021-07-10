@@ -1,0 +1,140 @@
+:root {
+    --radius: 0.5rem;
+    --radius-2: 1rem;
+    --padding: 1rem;
+    --pad-2: 0.5rem;
+    --font-size-smallest: 1rem;
+    --font-size-small: 2rem;
+    --font-size-mid: 3.5rem;
+    --font-size-large: 5rem;
+    --color-a: #18ffff;
+    --color-b: #6fffd2;
+    --color-c: #0affad;
+    --color-d: #08a573;
+    --color-e: #1de9b6;
+    --color-f: #004d40;
+    --color-g: #84ffff;
+    --color-h: #0b6953;
+    --color-i: #fcfc18;
+    --color-j: #f71111;
+    --color-0: #0ed80e;
+    --color-1: #2885db;
+    --color-2: #f56980;
+    --color-3: #07075f;
+    --color-4: #8f2c2cbe;
+    --color-5: #00ff00;
+    --color-6: #807676;
+    --color-7: #ff7b00;
+    --color-8: #dd06dd;
+    --color-9: rgba(50, 50, 50, 0.3);
+    --box-shadow: 0px 2px 5px 1px var(--color-3);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}   
+.vidCon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+h1 {
+    color: var(--color-g);
+    text-transform: capitalize;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 20, 5, 0.7);
+    /* mix-blend-mode: overlay; */
+    z-index: -1;
+}
+/* Alternative */
+/* header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    z-index: -1;
+} */
+
+
+/* Button Section */
+.switch-btn{
+    position: absolute;
+    bottom: 15%;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: .5rem;
+    border: none;
+    transition: all .3s ease;
+}
+
+.switch-btn span{
+    display: inline-block;
+    font-size: .85rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: var(--color-d);
+}
+.switch{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:var(--color-d);
+    border-radius: .5rem;
+    margin: 0;
+    display: block;
+    transition: all .3s ease;
+}
+
+.slide .switch{
+    left: 50%;
+}
+/* The Preloader Section  */
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: all 0.3s linear;
+}
+
+.hide-preloader{
+    z-index: -999;
+    visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+    h1{
+        font-size: 5rem;
+    }
+}

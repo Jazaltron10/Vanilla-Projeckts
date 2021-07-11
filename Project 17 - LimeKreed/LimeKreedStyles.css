@@ -1,0 +1,310 @@
+*{
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+font-family: Tangerine-Bold ;
+src: url('./assets/Tangerine-Bold.ttf');}
+@font-face{
+font-family:AbrilFatface-Regular;
+src: url('./assets/AbrilFatface-Regular.ttf');
+}
+body{
+    font-family: Tangerine-Bold ;
+}
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.showcase.active{
+    right: 300px;
+}
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-image: url('./assets/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    animation: round-bounce 2s ease-in-out infinite;
+}
+@keyframes round-bounce {
+    0% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(.8);
+    }
+}
+.toggle.active{
+    background-image: url('./assets/cancel1.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:orange;
+    mix-blend-mode: overlay;
+}
+.text{
+    position: relative;
+    z-index: 10;
+}
+.text h2{
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-family:AbrilFatface-Regular;
+}
+.text h3{
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-family:AbrilFatface-Regular;
+}
+.text p {
+    font-size: 1.1em;
+    margin:20px 0 ;
+    font-weight: 400;
+    max-width: 700px;
+}
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    background-color: white;
+    padding:10px 30px;
+    text-decoration: none;
+    color: black;
+    margin-top:10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+}
+.text a:hover{
+    letter-spacing: 6px;
+}
+.social{
+    position:absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social li{
+    list-style: none;
+}
+.social li a{
+    display: inline-block;
+    filter: invert(1);
+    margin-right:20px;
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+.social li a:hover{
+    transform: scale(.9) translateY(-15px);  
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    
+}
+.menu ul {
+    position: relative;
+    list-style: none;
+    
+}
+.menu ul li{
+    padding: 1rem;
+}
+.menu ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    
+}
+.menu ul li a:hover{
+    color: #03a9f4;
+}
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: orangered;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: all 0.3s linear;
+}
+
+.hide-preloader{
+    z-index: -999;
+    visibility: hidden;
+}
+/* Control Buttons */
+.switch-btn{
+    position: absolute;
+    top: 15%;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: .5rem;
+    border: 2px groove red;
+    transition: all .3s ease;
+}
+
+.switch-btn span{
+    display: inline-block;
+    font-size: .85rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: red;
+}
+.switch{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgba(140, 80, 10, .3);
+    border-radius: .5rem;
+    margin: 0;
+    display: block;
+    transition: all .3s ease;
+}
+
+.slide .switch{
+    left: 50%;
+}
+/*Responsive Section*/
+@media screen and (max-width:798px){
+    .showcase, .showcase header{
+        padding: 40px;
+    }    
+    .text h2{
+        font-size: 3em;
+    }
+.text h3{
+    font-size: 2em;
+}
+}
+
+/*added this section myself*/
+@media(max-height:320px){
+    
+    .showcase, .showcase header{
+        padding: 20px;
+    }
+    .text h2{
+        font-size: 1.5em;
+    }   
+    
+    .text h3{
+        font-size: 1em;
+    }
+    .social li a{
+        margin-left:-10px;
+    }
+    .menu{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media(max-width:400px){
+    
+    .showcase, .showcase header{
+        padding: 20px;
+    }
+    .social{
+        transform: scale(.5);
+        margin: 0;
+        left: -20px;
+    }
+    .menu{
+        width: 200px;
+    }
+    .showcase.active{
+        right: 200px;
+    }
+}
+
+
+@media screen and (min-width:768px){
+    .toggle{
+        width: 80px;
+        height: 80px;
+        background-size: 50px;
+    }
+    .toggle.active{
+        width: 80px;
+        height: 80px;
+        background-size: 50px;
+    }
+}

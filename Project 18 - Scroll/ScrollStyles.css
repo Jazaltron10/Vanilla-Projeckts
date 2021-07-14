@@ -1,0 +1,414 @@
+:root {
+    --radius: 0.5rem;
+    --radius-2: 1rem;
+    --padding: 1rem;
+    --pad-2: 0.5rem;
+    --font-size-smallest: 1rem;
+    --font-size-small: 2rem;
+    --font-size-mid: 3.5rem;
+    --font-size-large: 5rem;
+    --color-a: #18ffff;
+    --color-b: #6fffd2;
+    --color-c: #0affad;
+    --color-d: #08a573;
+    --color-e: #1de9b6;
+    --color-f: #004d40;
+    --color-g: #84ffff;
+    --color-h: #0b6953;
+    --color-i: #fcfc18;
+    --color-j: #f71111;
+    --color-0: #0ed80e;
+    --color-1: #2885db;
+    --color-2: #f56980;
+    --color-3: #07075f;
+    --color-4: #8f2c2cbe;
+    --color-5: #00ff00;
+    --color-6: #807676;
+    --color-7: #ff7b00;
+    --color-8: #dd06dd;
+    --color-9: rgba(50, 50, 50, 0.3);
+    --box-shadow: 0px 2px 5px 1px black;
+}
+/* General Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background-color: #000;
+}
+/* Project Styles Starts Here */
+/* Styling the MainContainer */
+main{
+    position: relative;
+}
+.MainCon{
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--color-c);
+    height: 100vh;
+    background-image: url('./images/tloup2.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*This is for the header section that contains the logo and links*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 5rem;
+    width: 100vw;
+    background-color: var(--color-f);
+    box-shadow: var(--box-shadow);
+}
+.togglers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100vw;
+    background-color: var(--color-f);
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+}
+/* This sectionis for styling the toggle icon */
+.toggle__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: transparent;
+    border: none;
+}
+.show__toggle{
+    display: block;
+}
+.toggle__img{
+    height: 40px;
+    width: 40px;
+}
+/* Styling the links */
+.NavCon{
+    width: 100%;
+    display: none;
+}
+.show__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lisCon{
+    width: 100vw;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-out;
+}
+.lisCon:nth-child(even){
+    background-color: var(--color-1);
+}
+.lisCon:hover{
+    background-color: var(--color-i);
+}
+
+/* The message section */
+.message{
+    color: #18ffff;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.message__title{
+    width: 100%;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    border: 2px solid var(--color-i);
+    padding: 0rem;
+}
+.dummy__text{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--color-i);
+    height: auto;
+}
+.exp{
+    width: 15rem;
+    border: 2px solid var(--color-i);
+    text-align: center;
+    padding: 1rem;
+    letter-spacing: .5rem;
+    margin: 0;
+}
+
+
+/* The Different Sections */
+.about{
+    height: 100vh;
+    background-color: var(--color-d);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+} 
+.services{
+    height: 100vh;
+    background-color: var(--color-3);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+} 
+.tours{
+    height: 100vh;
+    background-color: var(--color-j);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-g);
+    padding: .25rem;
+    width: 80vw;
+    height: 5rem;
+    letter-spacing: .25rem;
+    border-bottom: 2px groove var(--color-i);
+    border-top: 2px groove lime;
+    border-left:2px ridge blue;
+    border-right:2px ridge red;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.footer{
+    height: 30vh;
+    background-color: rgba(90, 0, 0, 0.3);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 411px) {
+.toggle__container{
+    display: block;
+}
+.NavCon{
+    display: none;
+}
+.show__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* The message section */
+.message__title{
+    width: 90%;
+    font-size: 3.5rem;
+}
+.dummy__text{
+    width: 90%;
+    padding: 1rem 2.5rem;
+}
+
+/* The Different Sections */
+.title{
+    padding: 1rem;
+    width: 80vw;
+}
+.lisCon{
+    width: 100vw;
+    height: 3.5rem;
+    font-size: 1.75rem;
+}
+
+}
+
+
+@media screen and (min-width: 540px) {
+.icon{
+    height: 3.5rem;
+    width: 3.5rem;
+}
+/* Styling the links */
+.toggle__container{
+    display: block;
+}
+.NavCon{
+    display: none;
+}
+.show__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lisCon{
+    width: 100vw;
+    height: 3.75rem;
+    font-size: 2.5rem;
+}
+
+/* The message section */
+.message__title{
+    width: 100%;
+    font-size: 4.5rem;
+}
+.dummy__text{
+    width: 90%;
+    padding: 1rem 2.5rem;
+}
+
+/* The Different Sections */
+.title{
+    padding: 1rem;
+    width: 80vw;
+}
+
+}
+
+
+@media screen and (min-width: 768px) {
+.header{
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+    background-color: var(--color-f);
+}
+.toggle__container{
+    display: none;
+}
+/*This is for the header section that contains the logo and links*/
+.icon{
+    height: 4rem;
+    width: 8rem;
+}
+.NavCon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.lisCon{
+    width: 8rem;
+    height: 4rem;
+    font-size: 2rem;
+}
+/* .toggle__container{
+    display: block;
+} */
+.footer{
+    height: 40vh;
+}
+}
+
+
+@media screen and (min-width: 1068px) {
+/* Project Styles Starts Here */
+/* Styling the MainContainer */
+.header{
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+    background-color: var(--color-f);
+    box-shadow: var(--box-shadow);
+}
+.NavCon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.icon{
+    height: 4rem;
+    width: 8rem;
+}
+.lisCon{
+    width: 8rem;
+    height: 4rem;
+    font-size: 2rem;
+    background-color: transparent;
+    margin: 0 1.5rem;
+    color: var(--color-a);
+}
+.lisCon:nth-child(even){
+    background-color: transparent;
+}
+.lisCon:hover{
+    background-color: var(--color-7);
+}
+/* The message section */
+.message{
+    padding: 0 15rem;
+}
+.message__title{
+    font-size: 5rem;
+}
+.dummy{
+    margin-top: 1rem;
+    padding: 0 5rem;
+}
+.exp{
+    width: 15rem;
+    border: 2px solid var(--color-i);
+    text-align: center;
+    padding: 1rem;
+    letter-spacing: .5rem;
+    margin-top: 1rem;
+}
+
+
+/* The Different Sections */
+.title{
+    font-size: 2.5rem;
+    padding: 1rem;
+    width: 80vw;
+    letter-spacing: .5rem;
+}
+.footer{
+    height: 50vh;
+}
+}

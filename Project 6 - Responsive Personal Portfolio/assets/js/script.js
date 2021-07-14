@@ -89,7 +89,7 @@ linkPortfolio.forEach(l => l.addEventListener('click', activePortfolio))
 
 
 
-/*===== S WIPER CAROUSEL =====*/ 
+/*===== SWIPER CAROUSEL =====*/ 
 const swiper = new Swiper('.testimonial__container', {
     spaceBetween: 16,
     loop: true,

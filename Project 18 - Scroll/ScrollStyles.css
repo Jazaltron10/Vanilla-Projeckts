@@ -154,13 +154,13 @@ main{
     font-size: 2.5rem;
     text-align: center;
     text-transform: capitalize;
-    border: 2px solid var(--color-i);
+    /* border: 2px solid var(--color-i); */
     padding: 0rem;
 }
 .dummy__text{
     width: 100%;
     padding: 1rem 1.5rem;
-    border: 2px solid var(--color-i);
+    /* border: 2px solid var(--color-i); */
     height: auto;
 }
 .exp{
@@ -178,21 +178,21 @@ main{
     height: 100vh;
     background-color: var(--color-d);
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
 } 
 .services{
     height: 100vh;
     background-color: var(--color-3);
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
 } 
 .tours{
     height: 100vh;
-    background-color: var(--color-j);
+    background-color: var(--color-7);
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
 }
 
@@ -202,10 +202,10 @@ main{
     align-items: center;
     text-align: center;
     font-size: 1rem;
-    color: var(--color-g);
+    color: white;
     padding: .25rem;
     width: 80vw;
-    height: 5rem;
+    /* height: 5rem; */
     letter-spacing: .25rem;
     border-bottom: 2px groove var(--color-i);
     border-top: 2px groove lime;
@@ -399,6 +399,7 @@ main{
     letter-spacing: .5rem;
     margin-top: 1rem;
 }
+
 
 
 /* The Different Sections */

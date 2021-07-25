@@ -26,3 +26,6 @@
 - Modal - Coding Addict
 - Questions - Coding Addict
 - FoodMenu - Coding Addict
+- Video - Coding Addict
+- LimeKreed - Traversy Media
+- ScrollProject - Coding Addict

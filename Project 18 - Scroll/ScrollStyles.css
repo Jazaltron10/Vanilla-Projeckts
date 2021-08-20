@@ -35,6 +35,9 @@
     padding: 0;
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 li{
     list-style: none;
 }
@@ -50,7 +53,7 @@ body{
 main{
     position: relative;
 }
-.top{
+.top-arrow{
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -61,6 +64,10 @@ main{
     width: 40px;
     height: 40px;
     transition: all .3s ease-in;
+    animation: bounce 2s ease-in-out infinite;
+}
+.top-arrow:hover{
+    transform: translateY(-10px);
 }
 i{
     font-size: 35px;
@@ -77,9 +84,6 @@ i{
     100% {
         transform: scale(.8);
     }
-}
-.top:hover{
-    transform: translateY(-10px);
 }
 .lego{
     height: 40px;
@@ -108,7 +112,7 @@ i{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 20;
+    z-index: 2000;
     height: 5rem;
     width: 100vw;
     background-color: var(--color-f);
@@ -128,6 +132,7 @@ i{
     justify-content: center;
     height: 3.5rem;
     width: 3.5rem;
+    margin-left: .5rem;
 }
 .logo{
     height: 50px;
@@ -142,6 +147,7 @@ i{
     width: 3.5rem;
     background-color: transparent;
     border: none;
+    margin-right: .5rem;
 }
 .show__toggle{
     display: block;

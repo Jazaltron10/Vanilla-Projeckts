@@ -53,12 +53,6 @@ body{
     height: 100%;
     background-color: aqua;
 }
-.social_links{
-    background-color: cadetblue;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 .navlist{
     height: 100%;
     padding: .5rem;
@@ -89,6 +83,12 @@ a{
     color: black;
 }
 /* This section is for the social media links. */
+.social_links{
+    background-color: cadetblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 .sociallist{
     display: flex;
     justify-content: space-evenly;

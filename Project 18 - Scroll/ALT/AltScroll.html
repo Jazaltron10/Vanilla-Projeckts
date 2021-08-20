@@ -9,20 +9,93 @@
     <title>Alt Scroll Project</title>
 </head>
 <body>
-    <main>
-    <!-- header -->
-    <header id="home">
-        <!-- navbar -->
-        <nav id="nav">
-            <div class="nav-center">
-                welcome
+        <!-- SCROLL TOP -->
+        <a href="#home" class="scrolltop" id="scroll-top">
+            <img src="../assets/up-arrow.png" alt="" class="lego">
+        </a>
+        <a href="#contact" class="scrollbottom" id="scroll-bottom">
+            <img src="../assets/up-arrow.png" alt="" class="elgo">
+        </a>
+        
+        <!-- HEADER -->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">Jazaltron</a>
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                Services
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#tours" class="nav__link">
+                                Tours
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                Contact Me
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="nav__toggle" id="nav-toggle">
+                    <!-- <i class='bx bx-menu'></i> -->
+                </div>
+            </nav>
+        </header>
+
+
+<main>
+    <section class="MainCon" id="home">
+        <div class="message">
+                <div class="nav-center">
+                    welcome
+                </div>
+                <h1 class="message__title">
+                    Scroll Project
+                </h1>
+                <p class="dummy__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit mollitia accusamus officiis labore iste, consectetur aperiam beatae voluptatibus quam tempora atque? Harum sequi eveniet excepturi amet quibusdam, repellat voluptas ipsam!
+                </p>
+                <a href="#tours" class="exp">
+                    Explore Tours
+                </a>
             </div>
-        </nav>
-    </header>
-    <div>
-    </main>
-
-
+        </section>
+    
+        <section class="about" id="about">
+            <div class="space"></div>
+            <div class="title">This is the About Section</div>
+        </section>
+    
+        <section class="services" id="services">
+            <div class="title">This is the Services Section</div>    
+        </section>
+    
+        <section class="tours" id="tours">
+            <div class="title">This is the tours Section</div>
+        </section>
+        <footer class="contact" id="contact">
+            <div class="title">This is the Contact Section</div>
+        </footer>
+</main>
+        <audio class="ACon" autoplay loop>
+            <source src="../assets/freedom.mp3" type="audio/mp3" />
+        </audio> 
     <script src="./AltScroll.js"></script>
 </body>
 </html>

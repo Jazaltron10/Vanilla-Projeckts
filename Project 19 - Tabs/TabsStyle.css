@@ -1,0 +1,136 @@
+:root {
+    --radius: 0.5rem;
+    --radius-2: 1rem;
+    --padding: 1rem;
+    --pad-2: 0.5rem;
+    --font-size-smallest: 1rem;
+    --font-size-small: 2rem;
+    --font-size-mid: 3.5rem;
+    --font-size-large: 5rem;
+    --color-a: #18ffff;
+    --color-b: #6fffd2;
+    --color-c: #0affad;
+    --color-d: #08a573;
+    --color-e: #1de9b6;
+    --color-f: #004d40;
+    --color-g: #84ffff;
+    --color-h: #0b6953;
+    --color-i: #fcfc18;
+    --color-j: #f71111;
+    --color-0: #0ed80e;
+    --color-1: #2885db;
+    --color-2: #f56980;
+    --color-3: #07075f;
+    --color-4: #8f2c2cbe;
+    --color-5: #00ff00;
+    --color-6: #807676;
+    --color-7: #ff7b00;
+    --color-8: #dd06dd;
+    --color-9:#FBF9F9;
+    --color-10: rgba(50, 50, 50, 0.3);
+    --box-shadow: 0px 2px 5px 1px black;
+}
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    color: rgb(2, 2, 61);
+    line-height: 1.5;
+    font-size: 1rem;
+    background:var(--color-g);
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img{
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+}
+button{
+    border: none;
+    background:transparent;
+}
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* START OF HEADER */
+.headerCon{
+    background:var(--color-c);
+    padding: 5rem;
+}
+.title{
+    text-align: center;
+    text-transform: uppercase;
+}
+.dummy{
+    text-align: center;
+}
+
+
+/* START OF SECTION */
+.sectionCon{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem; /*Optional*/
+}
+.image{
+    background: url("./images/road.jpg") center/cover no-repeat;/*center or 50% 50%*/
+    transition: all .5s ease-out;
+    border-radius: 1rem;
+}
+.navs{
+    background-color: var(--color-c);
+    /* box-shadow:  0 0 15px 1px #000; */
+}
+.image, .navs{
+    min-height: 30vh;
+}
+.navlinks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.links{
+    cursor: pointer;
+    padding: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-color: var(--color-3);
+    color: var(--color-c);
+}
+.links:hover{
+    background:var(--color-c);
+    color: var(--color-3);
+}
+.displayArea{
+    padding: 1rem;
+}
+/* Meant to change to min-width: 768px */
+@media screen and (max-width: 768px) {
+    .sectionCon{
+        background:var(--color-2);
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+        padding: .5rem; /*Optional*/
+    } 
+    .image, .navs{
+        min-height: 50vh;
+    }
+}
+

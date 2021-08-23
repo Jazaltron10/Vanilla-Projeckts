@@ -11,66 +11,87 @@
     <script src="https://kit.fontawesome.com/c4efc86f32.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<main>
-    <header class="header">
-        <!-- <audio class="ACon" autoplay loop>
-            <source src="./assets/Crooked.mp3" type="audio/mp3" />
-        </audio>  -->
-        <div class="togglers">
-            <h3 class="icon">
-                <img src="./assets/048-Weed.png" alt="" class="logo">
-            </h3>
-            <button class="toggle__container " id="toggle">
-                <img src="./assets/menu.png" alt="" class="toggle__img">
-            </button>
-        </div>
-        
-        <nav class="NavCon " id="navlinks">
-            <div class="lisCon"><a  href="#home">Home</a></div> 
-            <div class="lisCon"><a  href="#about">About</a></div> 
-            <div class="lisCon"><a  href="#services">Services</a></div> 
-            <div class="lisCon"><a  href="#tours">Tours</a></div> 
-            <div class="lisCon"><a  href="#footer">Contact Me</a></div> 
+    <!-- header -->
+    <header id="home">
+        <!-- navbar -->
+        <nav id="nav">
+            <div class="nav-center">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <img src="./assets/j.png" alt="logo" class="logo">
+                    <button class="nav-toggle">
+                        <img src="./assets/menu.png" alt="menu-toggle">
+                    </button>
+                </div>
+                <!-- links -->
+                <div class="links-container">
+                    <ul class="links">
+                        <li><a href="#home" class="scroll-link">
+                            home</a></li>
+                        <li><a href="#about" class="scroll-link">
+                            about</a></li>
+                        <li><a href="#services" class="scroll-link">
+                            services</a></li>
+                        <li><a href="#tours" class="scroll-link">
+                            tours</a></li>
+                        <!-- <li><a href="#tours" class="scroll-link">
+                            tours</a></li> -->
+                    </ul>
+                </div><!-- End of links container -->
+            </div><!--End of nav center-->
         </nav>
-    </header><!-- header ends here -->
-    
-    <button class="top-arrow">
-        <img src="./assets/up-arrow.png" alt="" class="lego">
-        <!-- <i class="fab fa-gitkraken"></i> -->
-    </button>
-    
-    <section class="MainCon" id="home">
 
-        <div class="message">
-            <h1 class="message__title">
-                scroll project
-            </h1>
-            <p class="dummy__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit mollitia accusamus officiis labore iste, consectetur aperiam beatae voluptatibus quam tempora atque? Harum sequi eveniet excepturi amet quibusdam, repellat voluptas ipsam!
-            </p>
-            <div class="exp">
-                Explore Tours
-            </div>
+        <!-- banner -->
+        <div class="banner">
+            <div class="container">
+                <h1>scroll project</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque veritatis alias, excepturi repudiandae nisi officia ipsa sequi. Dolorem, quae eum.
+                </p>
+                <a href="#tours" class="scroll-link btn btn-white">
+                    explore tours
+                </a>
+            </div><!--  Endof Container -->
+        </div><!--  Endof banner -->
+    </header>
+
+    <!-- Start of page Sections  -->
+    <!-- about section -->
+    <section id="about" class="section">
+        <div class="title">
+            <h2>about<span>us</span></h2>
         </div>
     </section>
-
-    <section class="about" id="about">
-        <div class="space"></div>
-        <div class="title">This is the About Section</div>
+    <!-- services section -->
+    <section id="services" class="section">
+        <div class="title">
+            <h2>our<span>services</span></h2>
+        </div>
     </section>
-
-    <section class="services" id="services">
-        <div class="title">This is the Services Section</div>    
+    <!-- tours section -->
+    <section id="tours" class="section">
+        <div class="title">
+            <h2>featured<span>tours</span></h2>
+        </div>
     </section>
-
-    <section class="tours" id="tours">
-        <div class="title">This is the tours Section</div>
-    </section>
-    <footer class="footer" id="footer">
-        <div class="title">This is the Footer Section</div>
-    </footer>
     
-</main>
+    <!-- footer -->
+    <footer class="section">
+        <p>
+            copyright &copy; backroads travel tours company
+            <span id="date"></span>
+            .all rights reserved
+        </p>
+    </footer>
+    <!-- Back to top button -->
+    <a href="#home" class="scroll-link top-link">
+        <img src="./assets/up-arrow.png" class="scrollTop" alt="">
+    </a>
+    <!-- Back to bottom button -->
+    <a href="#tours" class="scroll-link bottom-link">
+        <img src="./assets/up-arrow.png" class="scrollBottom" alt="">
+    </a>
+    <!-- JavaScript Section -->
     <script src="./ScrollLogic.js"></script>
 </body>
 </html>

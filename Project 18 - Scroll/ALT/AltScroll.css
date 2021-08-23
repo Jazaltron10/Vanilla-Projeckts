@@ -52,7 +52,7 @@ body {
     #ee82ee
 );
     background-size: 2000% 2000%;
-    animation: AnimationName 40s ease infinite;
+    animation: AnimationName 100s ease infinite;
 }
 
 body {
@@ -111,7 +111,7 @@ a{
 }
 .bd-container{
     max-width: 1024px;
-    /* width: calc(100% - 2rem); */
+    width: calc(100% - 2rem);
     margin: 0 auto;
 }
 /*===== NAV =====*/
@@ -130,10 +130,10 @@ a{
         padding-top: 1.5rem;
         text-align: center;
         background-color: #000;
-        transition: .4s;
+        transition:all .5s ease-in-out;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .7);
         border-radius: 0 0 2rem 2rem; /*TL, TR, BR, BL*/
-        
+        /* border: #00ff00 solid 2px; */
     }
     .nav__item{
         margin-left: -40px;
@@ -154,6 +154,7 @@ a{
 
 .nav__logo, .nav__toggle{
     color: var(--first-color-lighten);
+    margin: 0 .1rem;
 }
 .nav__toggle{
     position: fixed;
@@ -186,6 +187,9 @@ a{
     .nav__toggle{
         display: none;
     }
+    .title{
+        font-size: 2.5rem;
+    }
 }
 
 
@@ -208,7 +212,8 @@ a{
 .scrollbottom{
     position: fixed;
     bottom: 10px;
-    left: 10px;
+    /* left: 10px; */
+    right: 10px;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -341,7 +346,7 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-weight: 900;
     color: white;
     padding: 1rem;

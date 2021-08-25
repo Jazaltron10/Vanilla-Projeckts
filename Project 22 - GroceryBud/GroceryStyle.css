@@ -3,6 +3,7 @@
     --radius-2: 1rem;
     --padding: 1rem;
     --padding-2: 0.5rem;
+    --spacing:0.25rem;
     --font-size-smallest: 1rem;
     --font-size-small: 2rem;
     --font-size-mid: 3.5rem;
@@ -72,6 +73,8 @@ a {
 button{
     border: none;
     background:transparent;
+    cursor: pointer;
+    outline: none;
 }
 main{
     max-width: 1240px;
@@ -96,15 +99,40 @@ main{
 .foundation:hover{
     box-shadow: 0 0 15px 3px var(--color-i);
 }
-.title{
+.alert {
+    /* margin-bottom: 1rem; */
+    height: 2rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    color: var(--color-i);
+    padding: .25rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+.alert-success {
+    color: #155724;
+    background: #d4edda;
+}
+.pageTitle{
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
     padding: 2.5rem;
     font-size: 2rem;
     color: var(--color-i);
     text-transform: uppercase;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    /* border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; */
     border-bottom: var(--color-0) ridge 2px;
     
 }
@@ -138,33 +166,100 @@ main{
     border-radius: 10px;
     cursor: pointer;
     transition: all .5s ease-in;
+    border: none;
 }
 #submit:hover{
     background: #000;
     color: yellow;
 }
+/* GROCERY LIST OUTPUT SECTION */
 .grocery-container{
     background: var(--gradient-2);
     background-repeat: no-repeat;
     background-size: 500%;
-    min-height: 20rem;
-    padding: 2rem;
+    min-height: 15rem;
+    padding: 1rem;
     animation: bg-animation 20s infinite alternate;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-top: var(--color-j) ridge 2px;
+    /* visibility: hidden; could also use this*/
+    display: none;
+}
+.show-container{
+    display: block;
 }
 @keyframes bg-animation {
     0%{background-position: left;}
     100%{background-position: right;}
 }
-@media screen and (max-width: 700px) {
+.grocery-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin: .25rem 0;
+    border-radius: 10px;
+    padding: .2rem;
+    transition: all .3s ease-out;
+}
+.grocery-item:hover, .clr-btn:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* single grocery item */
+.grocery{
+    /* background: rgba(0, 0, 0, 0.5); for testing*/
+    color: var(--color-i);
+    /* color: var(--color-j); for testing*/
+    text-align: left;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    width: 15rem;
+    margin: 0 1rem;
+    /* width: 8rem; for smaller screens*/ 
+    /* background: yellow; for testing*/
+}
+.delete-btn, .edit-btn{
+    height: 2rem;
+    width: 2rem;
+    /* background: yellow; for testing*/
+}
+
+.btn{
+    height: 100%;
+    width: 100%;
+}
+.btncon{
+    display: grid;
+    place-items: center;
+}
+.clr-btn{
+    font-weight: bold;
+    width: 8rem;
+    height: 2rem;
+    padding: .25rem;
+    color: var(--color-i);
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .3s ease-in;
+}
+
+
+
+
+
+
+@media screen and (max-width: 750px) {
     .foundation{
         width: 90%;
         background: rgba(0,0,0,.5);
         margin: 2rem auto;
     }
-    .title{
+    .pageTitle{
         font-size: 1.45rem;
         text-transform: uppercase;
         background: #000;
@@ -175,5 +270,25 @@ main{
     #InputBox{
         width: 12.5rem;
         margin: 1rem 0;
+    }
+    .btn-container{
+        display: flex;
+    }
+    .grocery-item{
+    border-radius: 5px;
+    }
+    .grocery{
+        font-size: 1rem;
+    }
+    .delete-btn, .edit-btn{
+        height: 1.5rem;
+        width: 1.5rem;
+        /* background: yellow; for testing*/
+    }
+    
+    .clr-btn{
+        width: 5rem;
+        padding: .2rem;
+        border-radius: 5px;
     }
 }

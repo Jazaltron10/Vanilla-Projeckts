@@ -1,0 +1,179 @@
+:root {
+    --radius: 0.5rem;
+    --radius-2: 1rem;
+    --padding: 1rem;
+    --padding-2: 0.5rem;
+    --font-size-smallest: 1rem;
+    --font-size-small: 2rem;
+    --font-size-mid: 3.5rem;
+    --font-size-large: 5rem;
+    --color-a: #18ffff;
+    --color-b: #6fffd2;
+    --color-c: #0affad;
+    --color-d: #08a573;
+    --color-e: #1de9b6;
+    --color-f: #004d40;
+    --color-g: #84ffff;
+    --color-h: #0b6953;
+    --color-i: #fcfc18;
+    --color-j: #f71111;
+    --color-0: #0ed80e;
+    --color-1: #2885db;
+    --color-2: #f56980;
+    --color-3: #07075f;
+    --color-4: #8f2c2cbe;
+    --color-5: #00ff00;
+    --color-6: #807676;
+    --color-7: #ff7b00;
+    --color-8: #dd06dd;
+    --color-9:#FBF9F9;
+    --color-10: rgba(50, 50, 50, 0.3);
+    --box-shadow: 0px 2px 5px 1px black;
+    --gradient: linear-gradient(45deg,
+    #ff0000,
+    #ffa500,
+    #ffff00,
+    #00ff7f,
+    #0000ff,
+    #4b0082,
+    #ee82ee
+    );
+    --gradient-2:linear-gradient(120deg,
+    darkred,
+    red,
+    yellow,
+    lime,
+    darkgreen);
+}
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    color: rgb(2, 2, 61);
+    line-height: 1.5;
+    font-size: 1rem;
+    min-height: 100vh;
+    background: linear-gradient(rgba(247, 161, 3, .3), rgba(240, 66, 2,.3)),url(./firewatch.jpg) center/cover no-repeat;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    background:transparent;
+}
+main{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.container{
+    background:rgba(0,0,0,.5);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foundation{
+    background:rgba(0,0,0,.5);
+    width: 80%;
+    border-radius: 1rem;
+    margin: 5rem auto;
+    border: var(--color-i) ridge 2px;
+    box-shadow: 0 0 5px 1px var(--color-i);
+    transition: all .3s ease-out;
+}
+.foundation:hover{
+    box-shadow: 0 0 15px 3px var(--color-i);
+}
+.title{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2.5rem;
+    font-size: 2rem;
+    color: var(--color-i);
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom: var(--color-0) ridge 2px;
+    
+}
+.inputSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+}
+#InputBox{
+    width: 15rem;
+    height: 2rem;
+    margin: 0 1rem;
+    color: yellow;
+    border: groove 2px yellow;
+    background: black;
+    border-radius: 10px;
+    padding: .5rem;
+    outline: none;
+}
+#InputBox:focus{
+    border: groove 2px lime;
+    box-shadow: 0 2px 10px 3px lime;
+}
+#submit{
+    outline: none;
+    background:yellow;
+    width: 4rem;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+#submit:hover{
+    background: #000;
+    color: yellow;
+}
+.grocery-container{
+    background: var(--gradient-2);
+    background-repeat: no-repeat;
+    background-size: 500%;
+    min-height: 20rem;
+    padding: 2rem;
+    animation: bg-animation 20s infinite alternate;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: var(--color-j) ridge 2px;
+}
+@keyframes bg-animation {
+    0%{background-position: left;}
+    100%{background-position: right;}
+}
+@media screen and (max-width: 700px) {
+    .foundation{
+        width: 90%;
+        background: rgba(0,0,0,.5);
+        margin: 2rem auto;
+    }
+    .title{
+        font-size: 1.45rem;
+        text-transform: uppercase;
+        background: #000;
+    }
+    .inputSection{
+        flex-direction: column;
+    }
+    #InputBox{
+        width: 12.5rem;
+        margin: 1rem 0;
+    }
+}

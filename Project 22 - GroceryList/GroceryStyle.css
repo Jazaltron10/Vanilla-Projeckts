@@ -142,9 +142,9 @@ main{
     justify-content: center;
     padding: 2.5rem;
 }
-#InputBox{
-    width: 15rem;
-    height: 2rem;
+.inputBox{
+    width: 20rem;
+    height: 2.5rem;
     margin: 0 1rem;
     color: yellow;
     border: groove 2px yellow;
@@ -153,7 +153,7 @@ main{
     padding: .5rem;
     outline: none;
 }
-#InputBox:focus{
+.inputBox:focus{
     border: groove 2px lime;
     box-shadow: 0 2px 10px 3px lime;
 }
@@ -208,7 +208,7 @@ main{
 }
 
 /* single grocery item */
-.grocery{
+.singleGroceryItem{
     /* background: rgba(0, 0, 0, 0.5); for testing*/
     color: var(--color-i);
     /* color: var(--color-j); for testing*/
@@ -262,13 +262,12 @@ main{
     .pageTitle{
         font-size: 1.45rem;
         text-transform: uppercase;
-        background: #000;
     }
     .inputSection{
         flex-direction: column;
     }
-    #InputBox{
-        width: 12.5rem;
+    .inputBox{
+        width: 14rem;
         margin: 1rem 0;
     }
     .btn-container{
@@ -277,7 +276,7 @@ main{
     .grocery-item{
     border-radius: 5px;
     }
-    .grocery{
+    .singleGroceryItem{
         font-size: 1rem;
     }
     .delete-btn, .edit-btn{

@@ -63,7 +63,7 @@ body {
     line-height: 1.5;
     font-size: 1rem;
     min-height: 100vh;
-    background: linear-gradient(rgba(3, 231, 247, 0.493), rgba(2, 133, 240, 0.486), rgba(3, 7, 39, 0.3)),url(../beatSummer.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(3, 231, 247, 0.3), rgba(2, 133, 240, 0.22), rgba(3, 7, 39, 0.19)),url(../lakeside_sunset_landscape_5k-5120x2880.jpg) center/cover no-repeat;
 }
 ul {
     list-style-type: none;
@@ -189,6 +189,7 @@ span{
     background-image: var(--gradient-2);
     background-size: 400%;
     -webkit-background-clip: text;
+    background-clip:text;
     color: transparent;
     animation: bg-animation 15s infinite alternate;
     text-transform: capitalize;

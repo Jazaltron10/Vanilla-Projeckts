@@ -27,5 +27,10 @@
 - Questions - Coding Addict
 - FoodMenu - Coding Addict
 - Video - Coding Addict
-- LimeKreed - Traversy Media
+- LimeKreed - Original
 - ScrollProject - Coding Addict
+- Tabs - Coding Addict
+- Count Down Timer - Coding Addict
+- Lorem Ipsum Generator - Coding Addict
+- Grocery List - Coding Addict
+- Image Slider - Coding Addict

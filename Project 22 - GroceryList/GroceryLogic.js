@@ -1,5 +1,5 @@
 // ********* SELECT ITEMS *********
-const alert = document.querySelector(".alert");
+const alrt = document.querySelector(".alert");
 const form = document.querySelector(".foundation");
 const grocery = document.getElementById("grocery");
 const submitBtn = document.getElementById("submit");
@@ -66,13 +66,13 @@ function addItem(e){
 
 // display alert
 function displayAlert(text, action){
-    alert.textContent = text;
-    alert.classList.add(`alert-${action}`);
+    alrt.textContent = text;
+    alrt.classList.add(`alert-${action}`);
     
     // remove alert using setTimeout function
     setTimeout(function (){
-        alert.textContent = "";
-        alert.classList.remove(`alert-${action}`)
+        alrt.textContent = "";
+        alrt.classList.remove(`alert-${action}`)
     },2000)
 }
 

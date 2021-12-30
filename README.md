@@ -1,6 +1,6 @@
 # **_Vanilla-Projeckts_**
 
-# These new projects are going to be amazing
+# Amazing Projects
 
 ### Credit were Credit is due
 
@@ -12,25 +12,48 @@
 ### PROJECKTS
 
 - Creative agency site - Traversy Media
+
 - Item Lister - Traversy Media
+
 - ChessBoard - Original
+
 - Mega Menu - Codestackr
+
 - Simplicity - Original
+
 - Responsive Personal Portfolio -Bedimcode
+
 - Color Flipper - Coding Addict
+
 - Counter - Coding Addict
+
 - Modal Form - Traversy Media
+
 - Review Page - Coding Addict
+
 - NavBar - Coding Addict
+
+
 - SideBar - Coding Addict
+
 - Modal - Coding Addict
+
 - Questions - Coding Addict
+
 - FoodMenu - Coding Addict
+
 - Video - Coding Addict
+
 - LimeKreed - Original
+
 - ScrollProject - Coding Addict
+
 - Tabs - Coding Addict
+
 - Count Down Timer - Coding Addict
+
 - Lorem Ipsum Generator - Coding Addict
+
 - Grocery List - Coding Addict
+
 - Image Slider - Coding Addict

@@ -47,7 +47,7 @@ h1{
     background-size: 400%;
     -webkit-background-clip: text;
     color: transparent;
-    animation: bg-animation 15s infinite alternate;
+    animation: bg-animation 10s infinite alternate;
 }
 .bigcon{
     margin: auto;

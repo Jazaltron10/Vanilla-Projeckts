@@ -110,6 +110,10 @@ body{
     visibility: visible;
 }
 
+
+
+
+
 /* Mega Menu */
 .mega-menu{
     position: absolute;
@@ -153,6 +157,10 @@ body{
     bottom: 0;
     left: 0;
 }
+
+
+
+
 /* The image */
 .content .col img{
     width:100%;
@@ -238,3 +246,4 @@ body{
 .custom-shape-divider-bottom-1617355437 .shape-fill {
     fill: #ff652f;
 } */
+

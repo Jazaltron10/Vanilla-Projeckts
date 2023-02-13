@@ -178,14 +178,17 @@ span{
     border-radius: var(--radius-2);
 }
 .gradient h2{
-    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
     background-image: var(--gradient-2);
     background-size: 400%;
     -webkit-background-clip: text;
     color: transparent;
     animation: bg-animation 15s infinite alternate;
-    text-transform: capitalize;
-    letter-spacing: var(--spacing);
+    /* text-transform: capitalize; */
+    text-transform: uppercase;
+    /* letter-spacing: var(--spacing); */
+    letter-spacing: 1rem;
 }
 
 @keyframes bg-animation {
